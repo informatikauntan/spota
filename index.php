@@ -157,7 +157,18 @@ else
 {
   include "sambung.inc.php";
   $nim=strtoupper($_POST['nim']);
-  $login = mysql_query("SELECT * FROM log_mhs WHERE (NIM = '" . $nim . "') and (pwmhs = '" . md5($_POST['pass'] ). "')",$connect);
+  $pass=md5($_POST['pass']);
+  $query = sprintf("SELECT * FROM log_mhs WHERE NIM='%s' and PWMHS='%s'",mysql_real_escape_string($nim),mysql_real_escape_string($pass));
+  $login = mysql_query($query,$connect);
+
+	/* Basic Debugger of mysql_query -- start */
+	if (!$login) {
+    	$message  = 'Invalid query: ' . mysql_error() . "\n";
+    	$message .= 'Whole query: ' . $query;
+    	die($message);
+	}
+	/* Basic Debugger of mysql_query -- end */
+
   $rowcount = mysql_num_rows($login);
   if ($rowcount == 1)
   {
