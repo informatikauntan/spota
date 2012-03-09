@@ -181,19 +181,19 @@ else
 		$dif=$skr-$dul;
 		if ($cek['sta']=="0")
 		{
-    	header("Location: mhs-spota/index.php");
+    	header("Location: mhs/index.php");
 		}
 		else
 		{
 			if ($dif >= 600)
 			{
-				header("Location: mhs-spota/index.php");
+				header("Location: mhs/index.php");
 			}
 			else
 			{
 				if ($cek['ip']=="$ip")
 				{
-					header("Location: mhs-spota/index.php");
+					header("Location: mhs/index.php");
 				} 
 				else
 				{
