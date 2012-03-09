@@ -1,0 +1,28 @@
+.editor {
+  font-family: tahoma;
+  color:#666666;
+  border:1px solid #DEE3E7;
+  font-size:12px; 
+  background-color:#DEE3E7;
+  scrollbar-face-color: #DEE3E7;
+  scrollbar-highlight-color: #FFFFFF;
+  scrollbar-shadow-color: #DEE3E7;
+  scrollbar-3dlight-color: #D1D7DC;
+  scrollbar-arrow-color:  #006699;
+  scrollbar-track-color: #EFEFEF;
+  scrollbar-darkshadow-color: #98AAB1	
+}
+
+.button {
+margin: 1px;
+padding: 2px;
+}
+
+.button:hover 
+{ background-color:#EFEFEF;
+}
+
+table
+{ 
+border: 2px double #DEE3E7;
+}

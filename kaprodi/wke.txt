@@ -1,0 +1,39 @@
+#des
+{ 
+margin:50px 100px; padding: 2px 2px; height:200px;
+}
+
+#des table
+{ border: 2px solid #CDD6BF; background-color:#FFFFFF;
+ 
+}
+
+#des input
+{ border:0px;
+
+}
+
+
+
+
+
+<form method="post" action="lbhjauh1.php">
+<table width="40%" align="left">
+  <tr>
+    <td style="border-bottom: 1px solid #990000; "><img src="../images/kontak.gif">&nbsp;<b>Ubah Status</b></td>
+   </tr>
+  <tr>
+    <td style="border-bottom: 1px solid #ACB0A6; ">&nbsp;<input type="radio" name="put" value="2">Terima&nbsp;<input type="radio" name="put" value="0">Tolak</td>
+  </tr>
+  
+  <tr>
+    <td>
+	<input type="hidden" name="id" value="<?=$id;?>">
+	<input type="hidden" name="halaman" value="<?=$halaman;?>">
+	<input type="hidden" name="nim" value="<?=$nim;?>">
+	&nbsp;<input type="submit" name="submit" value="Tutup Desain" class="spesial">&nbsp;
+	<input type="button" value="Batal" onClick="self.history.back()" class="spesial"></td>
+    </tr>
+</table>
+
+</form>
