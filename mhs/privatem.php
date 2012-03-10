@@ -69,7 +69,7 @@ else
 	$init=$hasil['NIM'];
 }
 ?>
-<a href="hasilrev1.php?id_jud=<?php=$id_jud;?>#<?php=$urutan_rep;?>">.:: Kembali ke Halaman Review ::.</a>
+<a href="hasilrev1.php?id_jud=<?php echo $id_jud;?>#<?php echo $urutan_rep;?>">.:: Kembali ke Halaman Review ::.</a>
 <br><br>
 <form method="post" action="privatem1.php">
 <table width="100%" class="pm">
@@ -78,7 +78,7 @@ else
     </tr>
   <tr>
     <td width="30%" valign="top">&nbsp;Penerima</td>
-    <td width="30%" valign="top" bgcolor="#999999"><b><?php=$nama;?></b></td>
+    <td width="30%" valign="top" bgcolor="#999999"><b><?php echo $nama;?></b></td>
     <td width="40%" valign="top"><input type="checkbox" name="cari" value="ad" onclick="tradio(this)">&nbsp;Advanced Search&nbsp;&nbsp;<div id="acc"></div>
 	</td>
   </tr>
@@ -90,12 +90,12 @@ else
     </tr>
   <tr>
     <td colspan="3" bgcolor="#999999" align="center">	
-	<input type="hidden" name="id_ju" value="<?php=$id_jud;?>">
+	<input type="hidden" name="id_ju" value="<?php echo $id_jud;?>">
 	
-	<input type="hidden" name="rcp" value="<?php=$init;?>">
+	<input type="hidden" name="rcp" value="<?php echo $init;?>">
 
 	
-	<input type="hidden" name="urutan_rep" value="<?php=$urutan_rep;?>">
+	<input type="hidden" name="urutan_rep" value="<?php echo $urutan_rep;?>">
 	<input name="submit" type="submit" value="Submit">&nbsp;<input type="reset" value="Reset">
 	</td>
     </tr>

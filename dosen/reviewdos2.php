@@ -67,7 +67,7 @@ $result=mysql_fetch_array($execsql);
 ?>
 <br>
 <div id="link">
-<a href="reviewdos1.php?key=<?php=$key;?>&field=<?php=$field;?>&halaman=<?php=$halaman;?>#<?php=$urutan;?>">.:: Kembali ke Halaman Desain Praoutline ::.</a>
+<a href="reviewdos1.php?key=<?php echo $key;?>&field=<?php echo $field;?>&halaman=<?php echo $halaman;?>#<?php echo $urutan;?>">.:: Kembali ke Halaman Desain Praoutline ::.</a>
 </div>
 <br>
 <div id="judul">
@@ -252,13 +252,13 @@ if ($result['status_review']=='1')
   <tr>
     <td colspan="2" bgcolor="#999999" align="center">
 	
-	<input type="hidden" name="id_ju" value="<?php=$id_jud;?>">
+	<input type="hidden" name="id_ju" value="<?php echo $id_jud;?>">
 	
-	<input type="hidden" name="key" value="<?php=$key;?>">
-	<input type="hidden" name="field" value="<?php=$field;?>">
-	<input type="hidden" name="urutan" value="<?php=$urutan;?>">
+	<input type="hidden" name="key" value="<?php echo $key;?>">
+	<input type="hidden" name="field" value="<?php echo $field;?>">
+	<input type="hidden" name="urutan" value="<?php echo $urutan;?>">
 	
-	<input type="hidden" name="halaman" value="<?php=$halaman;?>">
+	<input type="hidden" name="halaman" value="<?php echo $halaman;?>">
 	
 	
 	<input name="submit" type="submit" value="Submit">&nbsp;<input type="reset" value="Reset"></td>

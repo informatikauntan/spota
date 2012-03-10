@@ -29,7 +29,7 @@ $halaman=$_GET['halaman'];
 $idpesan=$_GET['idpesan'];
 ?>
 <div id="edit">
-<a href="inbox.php?halaman=<?php=$halaman;?>&id=<?php=$idpesan;?>&dari=<?php=$nama;?>">Kembali ke Inbox Message</a><br><br>
+<a href="inbox.php?halaman=<?php echo $halaman;?>&id=<?php echo $idpesan;?>&dari=<?php echo $nama;?>">Kembali ke Inbox Message</a><br><br>
 <form method="post" action="repmes1.php">
 <table width="100%" class="pm" align="center">
  <tr>
@@ -37,11 +37,11 @@ $idpesan=$_GET['idpesan'];
     </tr>
   <tr>
     <td width="30%" valign="top" bgcolor="#FFFFFF">&nbsp;Penerima</td>
-    <td width="70%" valign="top" bgcolor="#FFFFFF"><b><?php=$nama;?></b>
-	<input type="hidden" name="receiver" value="<?php=$idp;?>">
-	<input type="hidden" name="halaman" value="<?php=$halaman;?>">
-	<input type="hidden" name="namarec" value="<?php=$nama;?>">
-	<input type="hidden" name="id" value="<?php=$idpesan;?>">
+    <td width="70%" valign="top" bgcolor="#FFFFFF"><b><?php echo $nama;?></b>
+	<input type="hidden" name="receiver" value="<?php echo $idp;?>">
+	<input type="hidden" name="halaman" value="<?php echo $halaman;?>">
+	<input type="hidden" name="namarec" value="<?php echo $nama;?>">
+	<input type="hidden" name="id" value="<?php echo $idpesan;?>">
 	</td>
   </tr>
   <tr>

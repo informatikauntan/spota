@@ -66,7 +66,7 @@ $result=mysql_fetch_array($execsql);
 ?>
 <br>
 <div id="link">
-<a href="recent.php?mode=<?php=$mode;?>">.:: Kembali ke Halaman Sebelumnya ::.</a>
+<a href="recent.php?mode=<?php echo $mode;?>">.:: Kembali ke Halaman Sebelumnya ::.</a>
 </div>
 <br>
 <div id="judul">
@@ -190,8 +190,8 @@ $no++;
   <tr>
     <td colspan="2" bgcolor="#999999" align="center">
 	
-	<input type="hidden" name="id_ju" value="<?php=$id_jud;?>">
-	<input type="hidden" name="mode" value="<?php=$mode;?>">
+	<input type="hidden" name="id_ju" value="<?php echo $id_jud;?>">
+	<input type="hidden" name="mode" value="<?php echo $mode;?>">
 	<input name="submit" type="submit" value="Submit">&nbsp;<input type="reset" value="Reset"></td>
     </tr>
 </table>

@@ -34,7 +34,7 @@ $sql = mysql_query("SELECT COUNT(IF(status_pesan='0',1,NULL)) as 'A' FROM pesan_
 <!--1st drop down menu -->
 <div id="dropmenu1" class="dropmenudiv" style="width: 160px; ">
 <a href="tulispesan.php">Write New</a>
-<a href="inbox.php">Inbox(<?php=$hasil['A'];?>)</a>
+<a href="inbox.php">Inbox(<?php echo $hasil['A'];?>)</a>
 </div>
 
 

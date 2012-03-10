@@ -67,7 +67,7 @@ $result=mysql_fetch_array($execsql);
 ?>
 <br>
 <div id="link">
-<a href="reviewdos1.php?field=<?php=$field;?>&semester=<?php=$semester;?>&tahun=<?php=$tahun;?>&halaman=<?php=$halaman;?>#<?php=$urutan;?>">.:: Kembali ke Halaman Desain Praoutline ::.</a>
+<a href="reviewdos1.php?field=<?php echo $field;?>&semester=<?php echo $semester;?>&tahun=<?php echo $tahun;?>&halaman=<?php echo $halaman;?>#<?php echo $urutan;?>">.:: Kembali ke Halaman Desain Praoutline ::.</a>
 </div>
 <br>
 <div id="judul">

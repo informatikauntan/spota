@@ -56,7 +56,7 @@ $urutan=$_GET['urutan'];
 			$field=$_GET['field'];
 			$halaman=$_GET['halaman'];
 ?>
-<a href="reviewmhs2.php?key=<?php=$key;?>&field=<?php=$field;?>&urutan=<?php=$urutan;?>&id_jud=<?php=$id_jud;?>&halaman=<?php=$halaman;?>#<?php=$urutan_rep;?>">.:: Kembali ke Halaman Review ::.</a>
+<a href="reviewmhs2.php?key=<?php echo $key;?>&field=<?php echo $field;?>&urutan=<?php echo $urutan;?>&id_jud=<?php echo $id_jud;?>&halaman=<?php echo $halaman;?>#<?php echo $urutan_rep;?>">.:: Kembali ke Halaman Review ::.</a>
 			<br><br>
 			<form action="replymcari1.php" method="post">
 			<table width="100%" class="khusus">
@@ -71,15 +71,15 @@ $urutan=$_GET['urutan'];
 			  </tr>			  			   			  
 			  <tr>
 				<td colspan="2" bgcolor="#999999" align="center">
-				<input type="hidden" name="id_ju" value="<?php=$id_jud;?>">
-				<input type="hidden" name="key" value="<?php=$key;?>">
-				<input type="hidden" name="field" value="<?php=$field;?>">
-				<input type="hidden" name="halaman" value="<?php=$halaman;?>">
-				<input type="hidden" name="urutan" value="<?php=$urutan;?>">
+				<input type="hidden" name="id_ju" value="<?php echo $id_jud;?>">
+				<input type="hidden" name="key" value="<?php echo $key;?>">
+				<input type="hidden" name="field" value="<?php echo $field;?>">
+				<input type="hidden" name="halaman" value="<?php echo $halaman;?>">
+				<input type="hidden" name="urutan" value="<?php echo $urutan;?>">
 				<?php
 				//echo "<input type='hidden' name='review_s' value='$row[review_sound]'>";		
 				?>
-				<input type="hidden" name="urutan_rep" value="<?php=$urutan_rep;?>">
+				<input type="hidden" name="urutan_rep" value="<?php echo $urutan_rep;?>">
 				<input name="submit" type="submit" value="Submit">&nbsp;<input type="reset" value="Reset"></td>
 				</tr>
 			</table>

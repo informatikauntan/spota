@@ -63,15 +63,15 @@ if (isset($_POST['Submit']))
    </tr>
   <tr>
     <td width="40%">&nbsp;NIP (Nomor Induk Pegawai)</td>
-    <td width="60%">&nbsp;<?php=$initid;?></td>
+    <td width="60%">&nbsp;<?php echo $initid;?></td>
   </tr>
   <tr>
     <td width="40%">&nbsp;Nama Anda</td>
-    <td width="60%">&nbsp;<b><?php=$r['nama_dosen'];?></b></td>
+    <td width="60%">&nbsp;<b><?php echo $r['nama_dosen'];?></b></td>
   </tr>
   <tr>
     <td>&nbsp;Password Baru</td>
-    <td>&nbsp;<input type="text" name="ubahpass" size="20" value="<?php=$r['pw'];?>" style="background-color:#CCCCCC; color:#FF0000; font-weight:bold;"></td>
+    <td>&nbsp;<input type="text" name="ubahpass" size="20" value="<?php echo $r['pw'];?>" style="background-color:#CCCCCC; color:#FF0000; font-weight:bold;"></td>
   </tr>
   <tr>
     <td colspan="2" align="center" >&nbsp;<input type="submit" name="Submit" value="Ubah Profil">&nbsp;</td>

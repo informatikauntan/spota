@@ -66,7 +66,7 @@ $sound=($has['review_sound']==NULL? "N/A" : "<a href=\"http://$host/newspota/dos
 $content = "<div style=\"background-color:#F0F0F0; padding: 10px 10px 10px 10px; border-left:3px solid #11034A;\"><b>$has[nama_dosen]$has[nama_mhs]</b><br>Review Text : <br>$text<br>Review Sound : $sound</div>";
 
 ?>
-<a href="reviewdos2.php?key=<?php=$key;?>&field=<?php=$field;?>&urutan=<?php=$urutan;?>&id_jud=<?php=$id_jud;?>&halaman=<?php=$halaman;?>#<?php=$urutan_rep;?>">.:: Kembali ke Halaman Review ::.</a>
+<a href="reviewdos2.php?key=<?php echo $key;?>&field=<?php echo $field;?>&urutan=<?php echo $urutan;?>&id_jud=<?php echo $id_jud;?>&halaman=<?php echo $halaman;?>#<?php echo $urutan_rep;?>">.:: Kembali ke Halaman Review ::.</a>
 			<br><br>
 			<form enctype="multipart/form-data" action="replydq1.php" method="post">
 			<table width="100%" class="khusus">
@@ -76,7 +76,7 @@ $content = "<div style=\"background-color:#F0F0F0; padding: 10px 10px 10px 10px;
 			  <tr>
 				<td width="30%" valign="top" bgcolor="#FFFFFF">&nbsp;Review Text</td>
 				<td bgcolor="#C4C6CA" valign="top" colspan="2">
-				<script>Init('review_text',90,15,'<?php=$content;?>'); </script>
+				<script>Init('review_text',90,15,'<?php echo $content;?>'); </script>
 				 </td>
 			  </tr>
 			  <tr>
@@ -96,13 +96,13 @@ $content = "<div style=\"background-color:#F0F0F0; padding: 10px 10px 10px 10px;
 			  </tr>
 			  <tr>
 				<td colspan="3" bgcolor="#999999" align="center">
-				<input type="hidden" name="id_ju" value="<?php=$id_jud;?>">
-				<input type="hidden" name="id_rev" value="<?php=$id_rev;?>">
-				<input type="hidden" name="key" value="<?php=$key;?>">
-				<input type="hidden" name="field" value="<?php=$field;?>">
-				<input type="hidden" name="urutan" value="<?php=$urutan;?>">
-				<input type="hidden" name="urutan_rep" value="<?php=$urutan_rep;?>">
-				<input type="hidden" name="halaman" value="<?php=$halaman;?>">
+				<input type="hidden" name="id_ju" value="<?php echo $id_jud;?>">
+				<input type="hidden" name="id_rev" value="<?php echo $id_rev;?>">
+				<input type="hidden" name="key" value="<?php echo $key;?>">
+				<input type="hidden" name="field" value="<?php echo $field;?>">
+				<input type="hidden" name="urutan" value="<?php echo $urutan;?>">
+				<input type="hidden" name="urutan_rep" value="<?php echo $urutan_rep;?>">
+				<input type="hidden" name="halaman" value="<?php echo $halaman;?>">
 				<input name="submit" type="submit" value="Submit">&nbsp;<input type="reset" value="Reset"></td>
 				</tr>
 			</table>

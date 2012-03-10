@@ -55,7 +55,7 @@ else
 	if(mysql_num_rows($cekonline)>=1){
 	 $updatenya = mysql_query("UPDATE online_user SET tm=now(),sta='1' WHERE id='$usernama'");
 	}else{
-	 $loginn = mysql_query("INSERT INTO `neospota`.`online_user` (`id` ,`ip` ,`tm` ,`sta` )VALUES (
+	 $loginn = mysql_query("INSERT INTO `online_user` (`id` ,`ip` ,`tm` ,`sta` )VALUES (
                           '$usernama', '$ip', now(), '1');
               ");
 	}

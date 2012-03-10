@@ -84,7 +84,7 @@ $id_rev=$hadang['id_review'];
 			$hasil="<font color='#FF0000'><b>[..: Tidak Setuju :..]</b></font>";
 			}
 			?>
-			<a href="hasilrev1.php?id_jud=<?php=$id_jud;?>#<?php=$urutan_rep;?>">.:: Kembali ke Halaman Review ::.</a>
+			<a href="hasilrev1.php?id_jud=<?php echo $id_jud;?>#<?php echo $urutan_rep;?>">.:: Kembali ke Halaman Review ::.</a>
 			<br><br>
 			<form enctype="multipart/form-data" action="edita1.php" method="post">
 			<table width="100%" class="khusus">
@@ -94,7 +94,7 @@ $id_rev=$hadang['id_review'];
 			  <tr>
 				<td width="30%" valign="top" bgcolor="#FFFFFF">&nbsp;Review Text</td>
 				<td bgcolor="#C4C6CA" valign="top" colspan="2">
-				<textarea name="review_text" cols="90" rows="15"><?php=$content;?></textarea>
+				<textarea name="review_text" cols="90" rows="15"><?php echo $content;?></textarea>
 				 </td>
 			  </tr>
 			  <tr>
@@ -103,14 +103,14 @@ $id_rev=$hadang['id_review'];
 				if (!empty($row['review_sound']))
 				{
 				?>
-				<td width="20%" bgcolor="#C4C6CA"><b><?php=$sound;?></b></td>
+				<td width="20%" bgcolor="#C4C6CA"><b><?php echo $sound;?></b></td>
 				<td width="50%"><input type="checkbox" name="delete" value="1">&nbsp;Delete review suara</td>
 				<?php
 				}
 				else
 				{
 				?>
-				<td bgcolor="#C4C6CA"><b><?php=$sound;?></b></td>
+				<td bgcolor="#C4C6CA"><b><?php echo $sound;?></b></td>
 				<?php
 				}
 				?>	
@@ -121,20 +121,20 @@ $id_rev=$hadang['id_review'];
 			  </tr>
 			  <tr>
 			  <td width="30%" valign="top">&nbsp;Sifat Review</td>
-				<td bgcolor="#C4C6CA" colspan="2">&nbsp;<?php=$rev.' '.$hasil;?>
+				<td bgcolor="#C4C6CA" colspan="2">&nbsp;<?php echo $rev.' '.$hasil;?>
 			  </tr>
 			  <?php			
 			  echo "<input type='hidden' name='jenis_rev' value='0'>";
 			  ?>
 			  <tr>
 				<td colspan="3" bgcolor="#999999" align="center">
-				<input type="hidden" name="id" value="<?php=$id_rev;?>">
-				<input type="hidden" name="id_ju" value="<?php=$id_jud;?>">
-				<input type="hidden" name="reviewer" value="<?php=$row['reviewer'];?>">
+				<input type="hidden" name="id" value="<?php echo $id_rev;?>">
+				<input type="hidden" name="id_ju" value="<?php echo $id_jud;?>">
+				<input type="hidden" name="reviewer" value="<?php echo $row['reviewer'];?>">
 				<?php
 				//echo "<input type='hidden' name='review_s' value='$row[review_sound]'>";		
 				?>
-				<input type="hidden" name="urutan_rep" value="<?php=$urutan_rep;?>">
+				<input type="hidden" name="urutan_rep" value="<?php echo $urutan_rep;?>">
 				<input name="submit" type="submit" value="Submit">&nbsp;<input type="reset" value="Reset"></td>
 				</tr>
 			</table>

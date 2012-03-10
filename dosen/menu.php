@@ -20,9 +20,16 @@ session_start();
 <?php
 $sql = mysql_query("SELECT COUNT(IF(status_pesan='0',1,NULL)) as 'A' FROM pesan_pribadi_mini WHERE penerima='$_SESSION[nipdos]'");
 	$hasil = mysql_fetch_array($sql);
+//Tambahan	
+	$sqlnamados = "SELECT nama_dosen FROM data_dosen WHERE NIP='$_SESSION[nipdos]'";
+	$rst = mysql_query($sqlnamados);
+	$row = mysql_fetch_array($rst);
+	$namados = $row[nama_dosen];
+//	
 ?>
 <div class="chromestyle" id="chromemenu">
 <ul>
+<li><a href="index.php">.: Anda login sebagai : <?php echo $namados."  :."; ?></a></li>
 <li><a href="dosen-spota.php">Dosen Index</a></li>
 <li><a href="#" rel="dropmenu1">Message</a></li>
 <li><a href="#" rel="dropmenu2">Review Dosen</a></li>

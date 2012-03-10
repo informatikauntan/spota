@@ -66,7 +66,7 @@ $result=mysql_fetch_array($execsql);
 ?>
 <br>
 <div id="link">
-<a href="reviewmhs1.php?key=<?php=$key;?>&field=<?php=$field;?>&halaman=<?php=$halaman;?>#<?php=$urutan;?>">.:: Kembali ke Halaman Desain Praoutline ::.</a>
+<a href="reviewmhs1.php?key=<?php echo $key;?>&field=<?php echo $field;?>&halaman=<?php echo $halaman;?>#<?php echo $urutan;?>">.:: Kembali ke Halaman Desain Praoutline ::.</a>
 </div>
 <br>
 <div id="judul">

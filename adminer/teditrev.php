@@ -77,16 +77,16 @@ else
   <tr>
     <td width="30%" valign="top" bgcolor="#FFFFFF">&nbsp;Review Text</td>
     <td bgcolor="#C4C6CA" valign="top">
-	<script>Init('review_text',90,15,'<?php=$content;?>'); </script>
+	<script>Init('review_text',90,15,'<?php echo $content;?>'); </script>
 	 </td>
   </tr>
   <tr>
     <td width="30%">&nbsp;Navigasi</td>
-	<td>&nbsp;<?php=$navigasi;?></td>
+	<td>&nbsp;<?php echo $navigasi;?></td>
   </tr>
   <tr>  
   <td colspan="2" bgcolor="#999999" align="center">
-  <input type="hidden" name="id" value="<?php=$id_rev;?>">
+  <input type="hidden" name="id" value="<?php echo $id_rev;?>">
 	
   <input name="submit" type="submit" value="Submit">&nbsp;<input type="reset" value="Reset"></td>
   </tr>	

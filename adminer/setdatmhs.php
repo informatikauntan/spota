@@ -264,7 +264,7 @@ function Showmes(idurl)
 			{	
 	?>		
 					<script type="text/javascript">alert("Data Mahasiswa Berhasil Diubah")</script>
-					<meta http-equiv="refresh" content="1;URL=admin-spota.php?part=setdatmhs&&angkt=<?php=$ang;?>&&nim=<?php echo "$NIMedit";?>">
+					<meta http-equiv="refresh" content="1;URL=admin-spota.php?part=setdatmhs&&angkt=<?php echo $ang;?>&&nim=<?php echo "$NIMedit";?>">
 	<?php		
 			}
 			}
@@ -272,7 +272,7 @@ function Showmes(idurl)
 			{
 	?>
 					<script type="text/javascript">alert("Data Mahasiswa Tidak Lengkap ataupun Email Tidak Valid")</script>
-					<meta http-equiv="refresh" content="1;URL=admin-spota.php?part=setdatmhs&&angkt=<?php=$ang;?>&&nim=<?php echo "$NIMedit";?>">
+					<meta http-equiv="refresh" content="1;URL=admin-spota.php?part=setdatmhs&&angkt=<?php echo $ang;?>&&nim=<?php echo "$NIMedit";?>">
 	<?php
 			}
 			

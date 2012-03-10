@@ -21,9 +21,16 @@ if (!isset($_SESSION['nim']))
 <?php
 	$sql = mysql_query("SELECT COUNT(IF(status_pesan='0',1,NULL)) as 'A' FROM pesan_pribadi_mini WHERE penerima='$initid'");
 	$hasil = mysql_fetch_array($sql);
+//Tambahan	
+	$sqlnamamhs = "SELECT nama_mhs FROM data_mahasiswa WHERE NIM='$initid'";
+	$rst = mysql_query($sqlnamamhs);
+	$row = mysql_fetch_array($rst);
+	$namamhs = $row[nama_mhs];
+//	
 ?>
 <div class="chromestyle" id="chromemenu">
 <ul>
+<li><a href="index.php">.: Anda login sebagai : <?php echo $namamhs."  :."; ?></a></li>
 <li><a href="index.php">Mahasiswa Index</a></li>
 <li><a href="uploaddes.php">Upload Praoutline</a></li>
 <li><a href="#" rel="dropmenu1">Review</a></li>
@@ -42,7 +49,7 @@ if (!isset($_SESSION['nim']))
 
 <div id="dropmenu2" class="dropmenudiv" style="width: 160px; ">
 <a href="tulispesan.php">Write New</a>
-<a href="inbox.php">Inbox(<?php=$hasil['A'];?>)</a>
+<a href="inbox.php">Inbox(<?php echo $hasil['A'];?>)</a>
 </div>
 
 

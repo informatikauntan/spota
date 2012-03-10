@@ -79,7 +79,7 @@ $content = "<div style=\"background-color:#F0F0F0; padding: 10px 10px 10px 10px;
 
 
 ?>
-<a href="hasilrev1.php?id_jud=<?php=$id_jud;?>#<?php=$urutan_rep;?>">.:: Kembali ke Halaman Review ::.</a>
+<a href="hasilrev1.php?id_jud=<?php echo $id_jud;?>#<?php echo $urutan_rep;?>">.:: Kembali ke Halaman Review ::.</a>
 			<br><br>
 			<form enctype="multipart/form-data" action="replyq1.php" method="post">
 			<table width="100%" class="khusus">
@@ -89,7 +89,7 @@ $content = "<div style=\"background-color:#F0F0F0; padding: 10px 10px 10px 10px;
 			  <tr>
 				<td width="30%" valign="top" bgcolor="#FFFFFF">&nbsp;Review Text</td>
 				<td bgcolor="#C4C6CA" valign="top" colspan="2">
-				<script>Init('review_text',80,15,'<?php=$content;?>'); </script>
+				<script>Init('review_text',80,15,'<?php echo $content;?>'); </script>
 				 </td>
 			  </tr>
 			  <tr>
@@ -101,13 +101,13 @@ $content = "<div style=\"background-color:#F0F0F0; padding: 10px 10px 10px 10px;
 			  ?>
 			  <tr>
 				<td colspan="3" bgcolor="#999999" align="center">
-				<input type="hidden" name="id_ju" value="<?php=$id_jud;?>">
-				<input type="hidden" name="ter" value="<?php=$ter;?>">
-				<input type="hidden" name="id_rev" value="<?php=$id_rev;?>">
+				<input type="hidden" name="id_ju" value="<?php echo $id_jud;?>">
+				<input type="hidden" name="ter" value="<?php echo $ter;?>">
+				<input type="hidden" name="id_rev" value="<?php echo $id_rev;?>">
 				<?php
 				//echo "<input type='hidden' name='review_s' value='$row[review_sound]'>";		
 				?>
-				<input type="hidden" name="urutan_rep" value="<?php=$urutan_rep;?>">
+				<input type="hidden" name="urutan_rep" value="<?php echo $urutan_rep;?>">
 				<input name="submit" type="submit" value="Submit">&nbsp;<input type="reset" value="Reset"></td>
 				</tr>
 			</table>

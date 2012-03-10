@@ -45,7 +45,7 @@ $result=mysql_fetch_array($execsql);
 <br>
 <a name="post"></a>
 <div id="link">
-<a href="praoutline1.php?key=<?php=$key;?>&field=<?php=$field;?>&halaman=<?php=$halaman;?>#<?php=$urutan;?>">.:: Kembali ke Hasil Pencarian ::.</a>
+<a href="praoutline1.php?key=<?php echo $key;?>&field=<?php echo $field;?>&halaman=<?php echo $halaman;?>#<?php echo $urutan;?>">.:: Kembali ke Hasil Pencarian ::.</a>
 </div>
 <br>
 <div id="judul">

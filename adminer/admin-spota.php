@@ -87,7 +87,7 @@ else
 		  <th>Jumlah Dosen dan Mahasiswa yang sedang ONLINE</th>
 		</tr>
 		<tr align="center">
-		  <td>Dosen : <b><?php=$jumdos;?></b> :: Mahasiswa : <b><?php=$jummhs;?></b></td>
+		  <td>Dosen : <b><?php echo $jumdos;?></b> :: Mahasiswa : <b><?php echo $jummhs;?></b></td>
 		</tr>    
 	</table>
 	<br>
@@ -96,7 +96,7 @@ else
 		<th>Review Mahasiswa</th>
 	  </tr>
 	  <tr align="center">
-		<td>Terdapat <a href="tamrevmhs.php"><?php=$jum;?></a> <b>review mahasiswa</b> baru</td>
+		<td>Terdapat <a href="tamrevmhs.php"><?php echo $jum;?></a> <b>review mahasiswa</b> baru</td>
 	  </tr>
 	</table>
 	

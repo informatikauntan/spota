@@ -64,7 +64,7 @@ $sound=($has['review_sound']==NULL? "N/A" : "<a href=\"http://$host/newspota/dos
 $content = "<div style=\"background-color:#F0F0F0; padding: 10px 10px 10px 10px; border-left:3px solid #11034A;\"><b>$has[nama_dosen]$has[nama_mhs]</b><br>Review Text : <br>$text<br>Review Sound : $sound</div>";
 
 ?>
-<a href="recent1.php?mode=<?php=$mode;?>&id_jud=<?php=$id_jud;?>#<?php=$urutan_rep;?>">.:: Kembali ke Halaman Review ::.</a>
+<a href="recent1.php?mode=<?php echo $mode;?>&id_jud=<?php echo $id_jud;?>#<?php echo $urutan_rep;?>">.:: Kembali ke Halaman Review ::.</a>
 			<br><br>
 			<form enctype="multipart/form-data" action="nrep1.php" method="post">
 			<table width="100%" class="khusus">
@@ -74,7 +74,7 @@ $content = "<div style=\"background-color:#F0F0F0; padding: 10px 10px 10px 10px;
 			  <tr>
 				<td width="30%" valign="top" bgcolor="#FFFFFF">&nbsp;Review Text</td>
 				<td bgcolor="#C4C6CA" valign="top" colspan="2">
-				<script>Init('review_text',80,15,'<?php=$content;?>'); </script>
+				<script>Init('review_text',80,15,'<?php echo $content;?>'); </script>
 				 </td>
 			  </tr>
 			  <tr>
@@ -94,10 +94,10 @@ $content = "<div style=\"background-color:#F0F0F0; padding: 10px 10px 10px 10px;
 			  </tr>
 			  <tr>
 				<td colspan="3" bgcolor="#999999" align="center">
-				<input type="hidden" name="id_ju" value="<?php=$id_jud;?>">
-				<input type="hidden" name="id_rev" value="<?php=$id_rev;?>">
-				<input type="hidden" name="mode" value="<?php=$mode;?>">
-				<input type="hidden" name="urutan_rep" value="<?php=$urutan_rep;?>">
+				<input type="hidden" name="id_ju" value="<?php echo $id_jud;?>">
+				<input type="hidden" name="id_rev" value="<?php echo $id_rev;?>">
+				<input type="hidden" name="mode" value="<?php echo $mode;?>">
+				<input type="hidden" name="urutan_rep" value="<?php echo $urutan_rep;?>">
 				
 				<input name="submit" type="submit" value="Submit">&nbsp;<input type="reset" value="Reset"></td>
 				</tr>

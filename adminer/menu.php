@@ -50,7 +50,7 @@ $sql = mysql_query("SELECT COUNT(IF(status_pesan='0',1,NULL)) as 'A' FROM pesan_
 
 <div id="dropmenu3" class="dropmenudiv" style="width: 160px; ">
 <a href="tulispesan.php">Write New</a>
-<a href="inbox.php">Inbox(<?php=$hasil['A'];?>)</a>
+<a href="inbox.php">Inbox(<?php echo $hasil['A'];?>)</a>
 </div>
 
 <script type="text/javascript">

@@ -67,7 +67,7 @@ $last=mysql_fetch_array($execsql);
 $ter=$last['P'];
 //echo "$ter";
 ?>
-<a href="hasilrev1.php?id_jud=<?php=$id_jud;?>#">.:: Kembali ke Halaman Review ::.</a>
+<a href="hasilrev1.php?id_jud=<?php echo $id_jud;?>#">.:: Kembali ke Halaman Review ::.</a>
 			<br><br>
 			<form enctype="multipart/form-data" action="reply1.php" method="post">
 			<table width="100%" class="khusus">
@@ -89,12 +89,12 @@ $ter=$last['P'];
 			  ?>
 			  <tr>
 				<td colspan="3" bgcolor="#999999" align="center">
-				<input type="hidden" name="id_ju" value="<?php=$id_jud;?>">
-				<input type="hidden" name="ter" value="<?php=$ter;?>">
+				<input type="hidden" name="id_ju" value="<?php echo $id_jud;?>">
+				<input type="hidden" name="ter" value="<?php echo $ter;?>">
 				<?php
 				//echo "<input type='hidden' name='review_s' value='$row[review_sound]'>";		
 				?>
-				<input type="hidden" name="urutan_rep" value="<?php=$urutan_rep;?>">
+				<input type="hidden" name="urutan_rep" value="<?php echo $urutan_rep;?>">
 				<input name="submit" type="submit" value="Submit">&nbsp;<input type="reset" value="Reset"></td>
 				</tr>
 			</table>

@@ -65,7 +65,7 @@ $text = html_entity_decode($has['review']);
 //$content = "<div style=\"background-color:#CDD7F0; padding: 10px 10px 10px 10px; border:1px solid #344D8F;\"><b>$has[nama_mhs]</b><br>&nbsp;&nbsp;Review Text : <br>&nbsp;&nbsp;&nbsp;&nbsp;$text<br></div>";
 $content = "<div style=\"background-color:#F0F0F0; padding: 10px 10px 10px 10px; border-left:3px solid #11034A;\"><b>$has[nama_mhs]</b><br>Review Text : <br>$text<br></div>";
 ?>
-<a href="reviewmhs2.php?key=<?php=$key;?>&field=<?php=$field;?>&urutan=<?php=$urutan;?>&id_jud=<?php=$id_jud;?>&halaman=<?php=$halaman;?>#<?php=$urutan_rep;?>">.:: Kembali ke Halaman Review ::.</a>
+<a href="reviewmhs2.php?key=<?php echo $key;?>&field=<?php echo $field;?>&urutan=<?php echo $urutan;?>&id_jud=<?php echo $id_jud;?>&halaman=<?php echo $halaman;?>#<?php echo $urutan_rep;?>">.:: Kembali ke Halaman Review ::.</a>
 			<br><br>
 			<form action="replymqcari1.php" method="post">
 			<table width="100%" class="khusus">
@@ -75,21 +75,21 @@ $content = "<div style=\"background-color:#F0F0F0; padding: 10px 10px 10px 10px;
 			  <tr>
 				<td width="30%" valign="top" bgcolor="#FFFFFF">&nbsp;Review Text</td>
 				<td bgcolor="#C4C6CA" valign="top" width="70%">
-				<script>Init('review_text',80,15,'<?php=$content;?>'); </script>
+				<script>Init('review_text',80,15,'<?php echo $content;?>'); </script>
 				 </td>
 			  </tr>			  			   			  
 			  <tr>
 				<td colspan="2" bgcolor="#999999" align="center">
-				<input type="hidden" name="id_ju" value="<?php=$id_jud;?>">
-				<input type="hidden" name="key" value="<?php=$key;?>">
-				<input type="hidden" name="field" value="<?php=$field;?>">
-				<input type="hidden" name="halaman" value="<?php=$halaman;?>">
-				<input type="hidden" name="urutan" value="<?php=$urutan;?>">
-				<input type="hidden" name="id_rev" value="<?php=$id_rev;?>">
+				<input type="hidden" name="id_ju" value="<?php echo $id_jud;?>">
+				<input type="hidden" name="key" value="<?php echo $key;?>">
+				<input type="hidden" name="field" value="<?php echo $field;?>">
+				<input type="hidden" name="halaman" value="<?php echo $halaman;?>">
+				<input type="hidden" name="urutan" value="<?php echo $urutan;?>">
+				<input type="hidden" name="id_rev" value="<?php echo $id_rev;?>">
 				<?php
 				//echo "<input type='hidden' name='review_s' value='$row[review_sound]'>";		
 				?>
-				<input type="hidden" name="urutan_rep" value="<?php=$urutan_rep;?>">
+				<input type="hidden" name="urutan_rep" value="<?php echo $urutan_rep;?>">
 				<input name="submit" type="submit" value="Submit">&nbsp;<input type="reset" value="Reset"></td>
 				</tr>
 			</table>

@@ -115,14 +115,14 @@ session_start();
 				$hasil_query = mysql_query($query);
 		?>
 					<script type="text/javascript">alert("Password Mahasiswa Berhasil Diubah")</script>
-					<meta http-equiv="refresh" content="0;URL=admin-spota.php?part=pasmhs&&angkt=<?php=$anganeh?>&&nim=<?php=$nim?>">
+					<meta http-equiv="refresh" content="0;URL=admin-spota.php?part=pasmhs&&angkt=<?php echo $anganeh?>&&nim=<?php echo $nim?>">
 		<?php			
 				}
 				else
 				{
 		?>
 					<script type="text/javascript">alert("Password Mahasiswa Kosong")</script>
-					<meta http-equiv="refresh" content="1;URL=admin-spota.php?part=pasmhs&&angkt=<?php=$anganeh?>&&nim=<?php=$nim?>">
+					<meta http-equiv="refresh" content="1;URL=admin-spota.php?part=pasmhs&&angkt=<?php echo $anganeh?>&&nim=<?php echo $nim?>">
 		<?php	
 				}	
 		}

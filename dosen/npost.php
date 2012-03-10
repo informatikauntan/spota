@@ -53,7 +53,7 @@ $id_jud=$_GET['id_jud'];
 //$halaman=$_GET['halaman'];
 
 ?>
-<a href="recent1.php?mode=<?php=$mode;?>&id_jud=<?php=$id_jud;?>">.:: Kembali ke Halaman Review ::.</a>
+<a href="recent1.php?mode=<?php echo $mode;?>&id_jud=<?php echo $id_jud;?>">.:: Kembali ke Halaman Review ::.</a>
 <br><br>
 <form enctype="multipart/form-data" action="npost1.php" method="post">
 <table width="100%" class="khusus">
@@ -84,8 +84,8 @@ $id_jud=$_GET['id_jud'];
   <tr>
     <td colspan="2" bgcolor="#999999" align="center">
 	
-	<input type="hidden" name="id_ju" value="<?php=$id_jud;?>">
-	<input type="hidden" name="mode" value="<?php=$mode;?>">
+	<input type="hidden" name="id_ju" value="<?php echo $id_jud;?>">
+	<input type="hidden" name="mode" value="<?php echo $mode;?>">
 	<input name="submit" type="submit" value="Submit">&nbsp;<input type="reset" value="Reset"></td>
     </tr>
 </table>

@@ -55,7 +55,7 @@ $id_jud=$_GET['id_jud'];
 $halaman=$_GET['halaman'];
 
 ?>
-<a href="reviewdos2.php?key=<?php=$key;?>&field=<?php=$field;?>&urutan=<?php=$urutan;?>&id_jud=<?php=$id_jud;?>&halaman=<?php=$halaman;?>">.:: Kembali ke Halaman Review ::.</a>
+<a href="reviewdos2.php?key=<?php echo $key;?>&field=<?php echo $field;?>&urutan=<?php echo $urutan;?>&id_jud=<?php echo $id_jud;?>&halaman=<?php echo $halaman;?>">.:: Kembali ke Halaman Review ::.</a>
 <br><br>
 <form enctype="multipart/form-data" action="replyd1.php" method="post">
 <table width="100%" class="khusus">
@@ -86,13 +86,13 @@ $halaman=$_GET['halaman'];
   <tr>
     <td colspan="2" bgcolor="#999999" align="center">
 	
-	<input type="hidden" name="id_ju" value="<?php=$id_jud;?>">
+	<input type="hidden" name="id_ju" value="<?php echo $id_jud;?>">
 	
-	<input type="hidden" name="key" value="<?php=$key;?>">
-	<input type="hidden" name="field" value="<?php=$field;?>">
-	<input type="hidden" name="urutan" value="<?php=$urutan;?>">
+	<input type="hidden" name="key" value="<?php echo $key;?>">
+	<input type="hidden" name="field" value="<?php echo $field;?>">
+	<input type="hidden" name="urutan" value="<?php echo $urutan;?>">
 	
-	<input type="hidden" name="halaman" value="<?php=$halaman;?>">
+	<input type="hidden" name="halaman" value="<?php echo $halaman;?>">
 	
 	
 	<input name="submit" type="submit" value="Submit">&nbsp;<input type="reset" value="Reset"></td>

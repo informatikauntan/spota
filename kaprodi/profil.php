@@ -44,7 +44,7 @@ if (isset($_POST['Submit']))
 
   <tr>
     <td>&nbsp;Password Baru</td>
-    <td>&nbsp;<input type="text" name="ubahpass" size="20" value="<?php=$r['pw'];?>" style="background-color:#CCCCCC; color:#FF0000; font-weight:bold;"></td>
+    <td>&nbsp;<input type="text" name="ubahpass" size="20" value="<?php echo $r['pw'];?>" style="background-color:#CCCCCC; color:#FF0000; font-weight:bold;"></td>
   </tr>
   <tr>
     <td colspan="2" align="center" >&nbsp;<input type="submit" name="Submit" value="Ubah Profil">&nbsp;</td>

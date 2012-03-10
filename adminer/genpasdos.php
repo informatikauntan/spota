@@ -82,7 +82,7 @@ session_start();
   				</tr>
   				<tr>
     			<td>Password</td>
-    			<td style="color:#990000; font-weight:bold; "><?php=$result[pw]?></td>
+    			<td style="color:#990000; font-weight:bold; "><?php echo $result[pw]?></td>
   				</tr>
 				</table>			
 			</ul>
@@ -99,7 +99,7 @@ session_start();
 			
 			?>
 		<li>
-			<form method="post" action="admin-spota.php?part=pasdos&&action=all&&nippas=<?php=$NIPedit?>">
+			<form method="post" action="admin-spota.php?part=pasdos&&action=all&&nippas=<?php echo $NIPedit?>">
 				<h2><u>Edit Data Dosen</u></h2>	
 				<ul>
 					<li>	  

@@ -49,7 +49,7 @@ $result=mysql_fetch_array($execsql);
 ?>
 <br>
 <div id="link">
-<a href="kaprodi.php?#<?php=$urutan;?>">.:: Kembali ke Halaman Index ::.</a>
+<a href="kaprodi.php?#<?php echo $urutan;?>">.:: Kembali ke Halaman Index ::.</a>
 </div>
 <br>
 <?php
@@ -214,7 +214,7 @@ $in++;
   </tr>
   <tr>
     <td valign="top">Judul Outline</td>
-    <td style="border:1px solid #FFFFFF;"><script>Init('judul_out',80,4,'<?php=$result[judul_praoutline];?>'); </script></td>
+    <td style="border:1px solid #FFFFFF;"><script>Init('judul_out',80,4,'<?php echo $result[judul_praoutline];?>'); </script></td>
   </tr>
   <tr>
     <td>Dosen Pembimbing 1</td>

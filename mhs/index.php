@@ -87,7 +87,7 @@ session_start();
       <th>Jumlah Dosen dan Mahasiswa yang sedang ONLINE</th>
     </tr>
     <tr align="center">
-      <td>Dosen : <b><?php=$jumdos;?></b> :: Mahasiswa : <b><?php=$jummhs;?></b></td>
+      <td>Dosen : <b><?php echo $jumdos;?></b> :: Mahasiswa : <b><?php echo $jummhs;?></b></td>
     </tr>    
   </table>
 </div>
@@ -97,7 +97,7 @@ session_start();
     <th>Reply BARU</th>
   </tr>
   <tr align="center">
-    <td><?php=$warni;?></td>
+    <td><?php echo $warni;?></td>
   </tr>
 </table>
 
@@ -108,7 +108,7 @@ session_start();
     <th>Pesan Baru</th>
   </tr>
   <tr align="center">
-    <td>Terdapat <a href="inbox.php"><?php=$hasil['A'];?></a> <b>pesan</b> yang belum anda baca</td>
+    <td>Terdapat <a href="inbox.php"><?php echo $hasil['A'];?></a> <b>pesan</b> yang belum anda baca</td>
   </tr>
 </table>
 </div>
