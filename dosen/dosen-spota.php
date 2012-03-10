@@ -34,9 +34,9 @@ $initid=$_SESSION['nipdos'];
 <body class="admin">
 <div id="header"></div>
 <div id="main">
-<? include "menu.php"; ?>
+<?php include "menu.php"; ?>
 </div>
-<?
+<?php
 	$sql="SELECT id, 
 	judul_praoutline,status_review, COUNT(IF(reviewer='" . $initid . "',1,NULL)) as 'P' 
 	FROM upload_mhs LEFT JOIN review_praoutline on id=id_upload 
@@ -86,7 +86,7 @@ $initid=$_SESSION['nipdos'];
       <th>Jumlah Dosen dan Mahasiswa yang sedang ONLINE</th>
     </tr>
     <tr align="center">
-      <td>Dosen : <b><?=$jumdos;?></b> :: Mahasiswa : <b><?=$jummhs;?></b></td>
+      <td>Dosen : <b><?php echo $jumdos;?></b> :: Mahasiswa : <b><?php echo $jummhs;?></b></td>
     </tr>    
   </table>
 </div>
@@ -96,7 +96,7 @@ $initid=$_SESSION['nipdos'];
     <th>Desain Praoutline BARU</th>
   </tr>
   <tr align="center">
-    <td>Terdapat <a href="recent.php?mode=new"><?=$jum;?></a> <b>desain praotline</b> yang belum anda REVIEW</td>
+    <td>Terdapat <a href="recent.php?mode=new"><?php echo $jum;?></a> <b>desain praotline</b> yang belum anda REVIEW</td>
   </tr>
 </table>
 </div>
@@ -106,7 +106,7 @@ $initid=$_SESSION['nipdos'];
     <th>Reply BARU</th>
   </tr>
   <tr align="center">
-    <td>Terdapat <a href="recent.php?mode=rep"><?=$juma;?></a> <b>reply</b> yang belum anda lihat</td>
+    <td>Terdapat <a href="recent.php?mode=rep"><?php echo $juma;?></a> <b>reply</b> yang belum anda lihat</td>
   </tr>
 </table>
 </div>
@@ -116,7 +116,7 @@ $initid=$_SESSION['nipdos'];
 		<th>Desain Praoutline Tidak Berputusan</th>
 	  </tr>
 	  <tr align="center">
-		<td>Terdapat <a href="recent.php?mode=nodes"><?=$jumb;?></a> <b>desain praotline</b> yang belum anda berikan keputusan</td>
+		<td>Terdapat <a href="recent.php?mode=nodes"><?php echo $jumb;?></a> <b>desain praotline</b> yang belum anda berikan keputusan</td>
 	  </tr>
 	</table>
 </div>
@@ -127,5 +127,3 @@ $initid=$_SESSION['nipdos'];
 </div>
 </body>
 </html>
-
-
