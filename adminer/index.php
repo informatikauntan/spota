@@ -1,7 +1,7 @@
-<?php 
+<?php
 session_start();
-if(!isset($_POST['submit']))
-{
+include ("../sambung.inc.php");
+if ($_SESSION['user_nama']==''){
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -38,11 +38,13 @@ if(!isset($_POST['submit']))
 		</ul>
 		</form>
 	</div>
+</body>
+</html>
 <?php
+}else{
+echo "<script>window.location.href='admin-spota.php'</script>";
 }
-else
-{
-  include "../sambung.inc.php";
+if (ISSET($_POST['submit'])){
   $login = mysql_query("select * from log_admin where (user_name = '" . $_POST['usernama'] . "') and (pwadmin = '" . md5($_POST['password'] ). "')",$connect);
   $rowcount = mysql_num_rows($login);
   if ($rowcount == 1) 
@@ -65,36 +67,30 @@ else
 		$dif=$skr-$dul;
 		if ($cek['sta']=="0")
 		{
-    	header("Location: admin-spota.php");
+		echo "<script>window.location.href='admin-spota.php'</script>";
 		}
 		else
 		{
 			if ($dif >= 600)
 			{
-				header("Location: admin-spota.php");
+				echo "<script>window.location.href='admin-spota.php'</script>";
 			}
 			else
 			{
 				if ($cek['ip']=="$ip")
 				{
-					header("Location: admin-spota.php");
+					echo "<script>window.location.href='admin-spota.php'</script>";
 				} 
 				else
 				{
-					header("Location: index.php");
+					echo "<script>window.location.href='index.php'</script>";
 				}
 			} 
 		
 		}
   }
-  else
-  {
-?>  
-  	<script type="text/javascript">alert("Gagal Login")</script>
-  	<meta http-equiv="refresh" content="1;URL=index.php">
-<?php  
+  else{
+  	echo "<script>alert('Gagal Login');</script>";
   }
-}  
+}
 ?>
-</body>
-</html>

@@ -1,7 +1,7 @@
-<?php 
+<?php
 session_start();
-if(!isset($_POST['ok']))
-{
+include ("../sambung.inc.php");
+if ($_SESSION['kapro']==''){
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -38,36 +38,32 @@ if(!isset($_POST['ok']))
 		</ul>
 	</form>	
 	</div>
+</body>
+</html>
 <?php
 }
-else
-{
-  include "../sambung.inc.php";
+else{
+echo "<script>window.location.href='kaprodi.php'</script>";
+}
+if (ISSET($_POST['ok'])){
   $login = mysql_query("select * from log_kaprodi where (kaprodi_name = '" . $_POST['kapro'] . "') and (pwkaprodi = '" . md5($_POST['pass'] ). "')",$connect);
   $rowcount = mysql_num_rows($login);
-  if ($rowcount == 1) 
-  {
+  if ($rowcount == 1){
     $_SESSION['kapro'] = $_POST['kapro'];
     //$cekonline = mysql_query("SELECT online_id FROM online_user WHERE chat_name='" . $_POST['usernama'] . "'",$connect);
 	  //  $re_cekonline = mysql_num_rows($cekonline);
 		//if ($re_cekonline == 0)
 		//if 
 		//{
-    	header("Location: kaprodi.php");
+    	echo "<script>window.location.href='kaprodi.php'</script>";
 		//}
 		//else
 		//{
 		//header("Location: index.php");
 		//}
   }
-  else
-  {
-?>  
-  	<script type="text/javascript">alert("Gagal Login")</script>
-  	<meta http-equiv="refresh" content="1;URL=index.php">
-<?php  
+  else{
+  echo "<script>alert('Gagal Login');</script>";
   }
 }  
 ?>
-</body>
-</html>
