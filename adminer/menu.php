@@ -1,10 +1,8 @@
 <?php
-
 session_start();
-  if (!isset($_SESSION['user_nama']))
-  {
+if (!isset($_SESSION['user_nama'])) {
 	header("Location: index.php");
-  }
+}
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -19,7 +17,7 @@ session_start();
 <body>
 <?php
 $sql = mysql_query("SELECT COUNT(IF(status_pesan='0',1,NULL)) as 'A' FROM pesan_pribadi_mini WHERE penerima='$_SESSION[user_nama]'");
-	$hasil = mysql_fetch_array($sql);
+$hasil = mysql_fetch_array($sql);
 ?>
 
 <div class="chromestyle" id="chromemenu">

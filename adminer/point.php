@@ -6,28 +6,8 @@ session_start();
 	header("Location: index.php");
   }
   
-//---------------------  
- $ip=$_SERVER['REMOTE_ADDR'];
- $now=date("Y-m-d H:i:s");
- $query = mysql_query("SELECT * FROM online_user WHERE id='$_SESSION[user_nama]'");
- $cek = mysql_fetch_array($query);
- 		$dul=strtotime($cek['tm']);
-		$skr=strtotime($now);
-		$dif=(integer)$skr-$dul;
-		//echo "$dif";
- if ($dif < 600)
- {		
- $sql = mysql_query("UPDATE online_user SET ip='$ip', tm='$now' ,sta='1' WHERE id='$_SESSION[user_nama]'"); 
- }
- else
- {
-  $sql = mysql_query("UPDATE online_user SET sta='0' WHERE id='$_SESSION[user_nama]'");
- session_destroy();
- header("Location: index.php");
- }
- $ubah = mysql_query("UPDATE online_user SET sta='0' WHERE ((UNIX_TIMESTAMP(NOW())-UNIX_TIMESTAMP(tm))/60) > 10"); 
- $ubah1 = mysql_query("DELETE FROM chatter WHERE (UNIX_TIMESTAMP(NOW())-UNIX_TIMESTAMP(waktu)) > 10800");                                                                        	
-//------------------------------   
+include "cekonline.php";
+$ubah1 = mysql_query("DELETE FROM chatter WHERE (UNIX_TIMESTAMP(NOW())-UNIX_TIMESTAMP(waktu)) > 10800");
 ?>
 
 <?php
