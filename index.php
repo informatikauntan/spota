@@ -124,6 +124,9 @@ if(!isset($_POST['ok']))
 					</ul>
 			</li>
 			<li>
+			<?php
+			if (!ISSET($_SESSION['nim'])){
+			?>
 			<form method="post" action="index.php">
 				<h2>Login Mahasiswa</h2>
 					<ul>					
@@ -136,12 +139,25 @@ if(!isset($_POST['ok']))
                            <td width="110">Password</td>
                            <td><input type="password" name="pass" size="20" class="biasa"></td>
                          </tr>
-						   <tr>
+						  <tr>
                            <td colspan="2" align="center"><input type="submit" name="ok" value="Login" class="spesial"></td>
                          </tr>
                        </table>
  					</ul>
-			</form>		
+			</form>	
+			<?php
+			}else{
+			?>
+			<h2>Welcome <?php echo $_SESSION['nim']; ?></h2>
+					<ul>					
+						<table width="200" align="center">
+                         <tr><td width="110"><a href="mhs/index.php">Masuk Ke Spota</a></td></tr>
+                         <tr><td width="110"><a href="mhs/logout.php">Logout</a></td></tr>
+                       </table>
+ 					</ul>
+			<?php
+			}
+			?>
 			</li>
 		</ul>
   </div>
@@ -155,7 +171,6 @@ if(!isset($_POST['ok']))
 }
 else
 {
-  include "sambung.inc.php";
   $nim=strtoupper($_POST['nim']);
   $pass=md5($_POST['pass']);
   $query = sprintf("SELECT * FROM log_mhs WHERE NIM='%s' and PWMHS='%s'",mysql_real_escape_string($nim),mysql_real_escape_string($pass));
@@ -163,15 +178,15 @@ else
   $rowcount = mysql_num_rows($login);
   if ($rowcount == 1)
   {
-  $_SESSION['nim'] = $nim;
-  $now=date("Y-m-d H:i:s");
+	$_SESSION['nim'] =$nim;
+	$now=date("Y-m-d H:i:s");
 	$ip=$_SERVER['REMOTE_ADDR'];
 	
     $cekonline = mysql_query("SELECT * FROM online_user WHERE id='" . $nim . "'",$connect);
 	if(mysql_num_rows($cekonline)>=1){
 	 $updatenya = mysql_query("UPDATE online_user SET tm=now(),sta='1' WHERE id='$nim'");
 	}else{
-	 $loginn = mysql_query("INSERT INTO `neospota`.`online_user` (`id` ,`ip` ,`tm` ,`sta` )VALUES (
+	 $loginn = mysql_query("INSERT INTO `online_user` (`id` ,`ip` ,`tm` ,`sta` )VALUES (
                           '$nim', '$ip', now(), '1');
               ");
 	}
