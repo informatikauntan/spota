@@ -114,7 +114,7 @@ session_start();
 </div>
 </div>
 <div id="footer">
-	<p>Copyright 2008 - Teknik Informatika - Universitas Tanjungpura</p>
+	<p>Copyright 2012 - Teknik Informatika - Universitas Tanjungpura</p>
 </div>
 </body>
 </html>
