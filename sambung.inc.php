@@ -1,7 +1,13 @@
 <?php
+###################################
+#                                 #
+#         File index.php          #
+#                                 #
+###################################
+
 $hostname = "localhost";
 $hostuser = "root";
-$hostpass = "root";
+$hostpass = "";
 $databasen = "spota";
 
 $connect = mysql_connect($hostname,$hostuser,$hostpass);
