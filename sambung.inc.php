@@ -1,9 +1,11 @@
 <?php
-###################################
-#                                 #
-#         File index.php          #
-#                                 #
-###################################
+#########################################
+#                                       #
+#      File sambung.inc.php             #
+#   Sekalian ganti host buat localhost  #
+#       tanpa password (standar)        #
+#                                       #
+#########################################
 
 $hostname = "localhost";
 $hostuser = "root";
