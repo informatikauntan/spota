@@ -8,27 +8,7 @@ if (!isset($_SESSION['nim']))
    header("Location: ../index.php");
   }
  $initid=strtoupper($_SESSION['nim']);  
- //--------------------  
-  $ip=$_SERVER['REMOTE_ADDR'];
- $now=date("Y-m-d H:i:s");
- $query = mysql_query("SELECT * FROM online_user WHERE id='$initid'");
- $cek = mysql_fetch_array($query);
- 		$dul=strtotime($cek['tm']);
-		$skr=strtotime($now);
-		$dif=(integer)$skr-$dul;
-		//echo "$dif";
- if ($dif < 600)
- {		
- $sql = mysql_query("UPDATE online_user SET ip='$ip', tm='$now' ,sta='1' WHERE id='$initid'"); 
- }
- else
- {
-  $sql = mysql_query("UPDATE online_user SET sta='0' WHERE id='$initid'");
- session_destroy();
- header("Location: ../index.php");
- }
- $ubah = mysql_query("UPDATE online_user SET sta='0' WHERE ((UNIX_TIMESTAMP(NOW())-UNIX_TIMESTAMP(tm))/60) > 10");                                                                     	
-//------------------------------  
+ include "cekonline.php";  
 ?> 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
