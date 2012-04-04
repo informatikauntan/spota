@@ -114,7 +114,7 @@ $ubah = mysql_query("UPDATE online_user SET sta='0' WHERE ((UNIX_TIMESTAMP(NOW()
 </div>
 </div>
 <div id="footer">
-	<p>Copyright 2008 - Teknik Informatika - Universitas Tanjungpura</p>
+	<p>Copyright 2012 - Teknik Informatika - Universitas Tanjungpura</p>
 </div>
 </body>
 </html>

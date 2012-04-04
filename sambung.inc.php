@@ -1,7 +1,15 @@
 <?php
+#########################################
+#                                       #
+#      File sambung.inc.php             #
+#   Sekalian ganti host buat localhost  #
+#       tanpa password (standar)        #
+#                                       #
+#########################################
+
 $hostname = "localhost";
 $hostuser = "root";
-$hostpass = "root";
+$hostpass = "";
 $databasen = "spota";
 
 $connect = mysql_connect($hostname,$hostuser,$hostpass);
