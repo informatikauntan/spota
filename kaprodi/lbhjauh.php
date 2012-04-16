@@ -326,7 +326,7 @@ $in++;
 </div>
 <br><br>   	 
 <div id="footer">
-	<p>Copyright 2008 - Teknik Informatika - Universitas Tanjungpura</p>
+	<?php include "../footer.php"; ?>
 </div>
 </body>
 </html>

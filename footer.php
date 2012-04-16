@@ -1,0 +1,1 @@
+<p>Copyright &copy; 2008-2012 Teknik Informatika Universitas Tanjungpura</p>
